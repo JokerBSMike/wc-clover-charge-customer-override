@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Clover Charge Customer Info (Override)
- * Description: Injects WooCommerce billing customer info into Clover /v1/charges requests for the First Data/Clover gateway.
- * Author: Joker
+ * Description: Injects WooCommerce billing customer info into Clover /v1/charges requests for the Clover Payments for WooCommerce plugin from Kestrel.
+ * Author: Joker Business Solutions
  */
 
 defined('ABSPATH') || exit;
@@ -77,5 +77,6 @@ add_filter('wc_first_data_clover_credit_card_http_request_args', function ($args
 	}
 
 	return $args;
+
 
 }, 10, 2);
