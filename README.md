@@ -1,8 +1,8 @@
-# WooCommerce Clover Charge Customer Override
+# Clover for WooCommerce Customer Override
 
-This MU-plugin injects WooCommerce billing customer data into Clover `/v1/charges` API requests when using the **WooCommerce Clover Payment Gateway (First Data)** plugin.
+This MU-plugin injects WooCommerce billing customer data into Clover `/v1/charges` API requests when using the **Clover for WooCommerce** plugin from Kestrel.
 
-By default, the First Data Clover gateway does not send the `customer` object when creating a charge. As a result, customer names do not appear in Clover’s transaction list.
+By default, the Clover for WooCommerce plugin does not send the `customer` object when creating a charge. As a result, customer names do not appear in Clover’s transaction list.
 
 This plugin corrects that behavior without modifying core plugin files.
 
@@ -12,12 +12,11 @@ This plugin corrects that behavior without modifying core plugin files.
 
 When using:
 
-WooCommerce → Payments → Clover (First Data)  
-Mode: **Charge**
+Clover for WooCommerce  
 
 Transactions appear in Clover without customer names.
 
-The official Clover WooCommerce plugin includes:
+The official Clover Payments plugin includes:
 
 ```json
 "customer": {
@@ -26,7 +25,7 @@ The official Clover WooCommerce plugin includes:
 }
 ```
 
-The First Data gateway does not.
+The Clover for WooCommerce plugin does not.
 
 ---
 
@@ -85,9 +84,9 @@ MU-plugins cannot be accidentally disabled and survive theme changes.
 
 Tested with:
 
-- WooCommerce
-- WooCommerce Clover Payment Gateway (First Data)
-- Charge mode (not Auth-only)
+- WordPress 6.9
+- WooCommerce 10.4.3
+- Clover for WooCommerce 5.3.2
 
 Works with:
 
